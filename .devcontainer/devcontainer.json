@@ -1,0 +1,34 @@
+{
+	"name": "GPT Pilot",
+
+	"dockerComposeFile": "compose.yml",
+
+	// The 'service' property is the name of the service for the container that VS Code should
+	// use. Update this value and .devcontainer/compose.yml to the real service name.
+	"service": "gpt-pilot",
+
+	// The 'workspaceFolder' property is the path VS Code should open by default when
+	// connected. Corresponds to a volume mount in .devcontainer/compose.yml
+	"workspaceFolder": "/app",
+
+	// Customize work environment with vscode plugins and settings.
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"pythagoratechnologies.gpt-pilot-vs-code"
+			],
+			"settings": {
+				"gptPilot.installationPath": ""
+			}
+		}
+	},
+
+	// Uncomment the next line if you want to keep your containers running after VS Code shuts down.
+	// "shutdownAction": "none",
+
+	// run commands after the container is created.
+	// "postCreateCommand": "uname -a",
+
+	// Define which user is going to run the containerized environment
+	"remoteUser": "root"
+}
